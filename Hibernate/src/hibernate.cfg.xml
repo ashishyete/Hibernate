@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate_learning</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">root</property>
+
+		<!-- Jdbc Connection Pool size -->
+		<property name="hiberrnate.connection.pool_size">1</property>
+		<!-- Hibernate Dialect -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<!-- Disable Second level Cache -->
+		<property name="hibernate.cache.provider_class">org.hibernate.cache.internal.NoCachingRegionFactory</property>
+		<!-- Hibernate Show Sql -->
+		<property name="hibernate.show_sql">true</property>
+		<!-- Hibernate create ddl -->
+		<property name="hibernate.hbm2ddl.auto">create</property>
+		<!-- Name of Annotated Entity classes -->
+	</session-factory>
+</hibernate-configuration>
