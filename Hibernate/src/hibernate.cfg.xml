@@ -10,7 +10,7 @@
 		<property name="hibernate.connection.password">root</property>
 
 		<!-- Jdbc Connection Pool size -->
-		<property name="hiberrnate.connection.pool_size">1</property>
+		<property name="hibernate.connection.pool_size">1</property>
 		<!-- Hibernate Dialect -->
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 		<!-- Disable Second level Cache -->
@@ -19,6 +19,7 @@
 		<property name="hibernate.show_sql">true</property>
 		<!-- Hibernate create ddl -->
 		<property name="hibernate.hbm2ddl.auto">create</property>
-		<!-- Name of Annotated Entity classes -->
+		
+		<mapping class="com.hibernate.dto.UserDetails"/>
 	</session-factory>
 </hibernate-configuration>

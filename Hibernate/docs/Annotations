@@ -1,0 +1,4 @@
+Annotations Used :
+
+1. @Entity : Treats class as Entity. 
+2. @Id : Used for making a column as primary key
