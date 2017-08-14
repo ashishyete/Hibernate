@@ -19,7 +19,7 @@
 		<property name="hibernate.show_sql">true</property>
 		<!-- Hibernate create ddl -->
 		<!-- <property name="hibernate.hbm2ddl.auto">create</property>  -->
-		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="hibernate.hbm2ddl.auto">create</property>
 		
 		<mapping class="com.hibernate.dto.UserDetails"/>
 		<mapping class="com.hibernate.dto.EmployeeDetails"/>

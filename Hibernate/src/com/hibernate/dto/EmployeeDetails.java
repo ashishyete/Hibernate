@@ -3,15 +3,26 @@
  */
 package com.hibernate.dto;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
+import java.util.Set;
 
+import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.Lob;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
+
+import org.hibernate.annotations.CollectionId;
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Type;
 
 /**
  * @author Ashish
@@ -30,6 +41,17 @@ public class EmployeeDetails {
 	private String Address;
 	@Lob
 	private String description;
+	//No Primary key for Collection Object
+	@ElementCollection
+	@JoinTable(name="USER_ADDRESS",joinColumns=@JoinColumn(name="Employee_Id"))
+	private Set<Address> listOfAddress;
+	
+	//Primary Key for collection object
+	@GenericGenerator(name="sequence-gen",strategy="sequence")
+	@ElementCollection
+	@JoinTable(name="USER_ADDR",joinColumns=@JoinColumn(name="Emp_Id"))
+	@CollectionId(columns = { @Column(name="Addr_Id") }, generator = "sequence-gen", type = @Type(type="long"))
+	private Collection<Address> listOfAddr = new ArrayList<>();
 	/**
 	 * @return the empId
 	 */
@@ -90,5 +112,30 @@ public class EmployeeDetails {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	/**
+	 * @return the listOfAddress
+	 */
+	public Set<Address> getListOfAddress() {
+		return listOfAddress;
+	}
+	/**
+	 * @param listOfAddress the listOfAddress to set
+	 */
+	public void setListOfAddress(Set<Address> listOfAddress) {
+		this.listOfAddress = listOfAddress;
+	}
+	/**
+	 * @return the listOfAddr
+	 */
+	public Collection<Address> getListOfAddr() {
+		return listOfAddr;
+	}
+	/**
+	 * @param listOfAddr the listOfAddr to set
+	 */
+	public void setListOfAddr(Collection<Address> listOfAddr) {
+		this.listOfAddr = listOfAddr;
+	}
+	
 	
 }

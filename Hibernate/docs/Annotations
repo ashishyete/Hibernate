@@ -14,9 +14,19 @@ Annotations Used :
 12.@AttributeOverrides  : Can contain multiple @AttributeOverride
 13.@Embeded				: to show column is embedable
 14.@EmbededId			: Used for Composite Primary key using Embeded object
-15.
-16.
-17.
-18.
-19.
-20.
+15.@ElementCollection   : 
+16.@JoinTable			:
+17.@JoinColumn			:
+18.@CollectionId		:
+19.@GenericGenerator	:
+20.@Type				:
+21.
+22.
+23.
+24.
+25.
+26.
+27.
+28.
+29.
+30.
