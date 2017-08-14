@@ -33,7 +33,8 @@ final static Logger log = Logger.getLogger(HibernateUtil.class);
 			}
 
 		} catch (Exception ex) {
-			log.error("Error Caught while creating Hibernate Session factory");
+			log.error("Error Caught while creating Hibernate Session factory ");
+			ex.printStackTrace();
 		}
 		return sessionFactory;
 	}

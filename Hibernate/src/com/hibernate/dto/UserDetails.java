@@ -3,19 +3,24 @@
  */
 package com.hibernate.dto;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  * @author Ashish
  *
  */
 
-@Entity
+@Entity(name="userDetails")
+@Table (name="USER_DETAIL")
 public class UserDetails {
 	
 	@Id
+	@Column(name="USER_ID")
 	private int userId;
+	@Column(name="USER_NAME")
 	private String username;
 	
 	/**

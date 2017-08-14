@@ -1,4 +1,22 @@
 Annotations Used :
 
-1. @Entity : Treats class as Entity. 
-2. @Id : Used for making a column as primary key
+1. @Entity  			: Treats class as Entity. 
+2. @Id 					: Column is  primary key
+3. @Column  			: Define Column names and configs
+4. @Table  				: Create Table name
+5. @Basic   			: Defaults are applied
+6. @Transient   	 	: Skip persisting Column
+7. @Temporal		 	: Date Manipulation
+8. @LOB					: Large Object
+9. @GeneratedValue   	: Used for generating Sequence
+10.@Embedable         	: This will tell hibernate, not to create a new table, but this value object will be embedded within another entity object.
+11.@AttributeOverride 	: Overrides default entity column names.
+12.@AttributeOverrides  : Can contain multiple @AttributeOverride
+13.@Embeded				: to show column is embedable
+14.@EmbededId			: Used for Composite Primary key using Embeded object
+15.
+16.
+17.
+18.
+19.
+20.

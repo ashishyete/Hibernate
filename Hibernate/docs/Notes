@@ -1,0 +1,9 @@
+
+Question : @Id (primary key): Difference between Natural Key and Surrogate Key
+Answer : If  the primary key do not have any business rule, these are termed as surrogate key,  but if the primary key has business rule its called as Natural key.
+ex: userId : if used only for incremental Id generation, but not used for Business rules, is Surrogate Key.
+	userName : if primay key and used for unique login, is Natural key.
+	
+Two types of Objects 
+1. Value Object
+2. Entity Object	
