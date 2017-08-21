@@ -11,6 +11,7 @@ import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
@@ -48,7 +49,7 @@ public class EmployeeDetails {
 	
 	//Primary Key for collection object
 	@GenericGenerator(name="sequence-gen",strategy="sequence")
-	@ElementCollection
+	@ElementCollection(fetch=FetchType.EAGER)
 	@JoinTable(name="USER_ADDR",joinColumns=@JoinColumn(name="Emp_Id"))
 	@CollectionId(columns = { @Column(name="Addr_Id") }, generator = "sequence-gen", type = @Type(type="long"))
 	private Collection<Address> listOfAddr = new ArrayList<>();

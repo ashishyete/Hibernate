@@ -6,4 +6,7 @@ ex: userId : if used only for incremental Id generation, but not used for Busine
 	
 Two types of Objects 
 1. Value Object
-2. Entity Object	
+2. Entity Object
+
+Imp --
+Hibernate Fetch : Lazy, Eager	
