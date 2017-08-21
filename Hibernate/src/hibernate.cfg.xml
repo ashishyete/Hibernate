@@ -26,5 +26,7 @@
 		<mapping class="com.hibernate.dto.StudentDetails"/>
 		<mapping class="com.hibernate.dto.OfficeDetails"/>
 		<mapping class="com.hibernate.dto.Owner"/>
+		<mapping class="com.hibernate.dto.PersonDetails"/>
+		<mapping class="com.hibernate.dto.Vehicle"/>
 	</session-factory>
 </hibernate-configuration>
