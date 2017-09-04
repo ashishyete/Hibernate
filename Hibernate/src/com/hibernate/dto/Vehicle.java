@@ -1,33 +1,24 @@
-/**
- * 
- */
 package com.hibernate.dto;
 
-import java.util.Date;
-
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-
-/**
- * @author Ashish
- *
- */
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Vehicle {
 
 	@Id
-	@GeneratedValue
-	@Column(name="VEHICLE_ID")
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int vehicleId;
-	@Column(name="VEHICLE_NAME",nullable=false, length=12)
 	private String vehicleName;
-	@Temporal(TemporalType.DATE)
-	private Date dateOfPurchase;
+	private String vehicleModel;
+	
+	@ManyToOne
+	@JoinColumn(name="Person_Id")
+	private PersonDetails pd;
 	/**
 	 * @return the vehicleId
 	 */
@@ -53,17 +44,28 @@ public class Vehicle {
 		this.vehicleName = vehicleName;
 	}
 	/**
-	 * @return the dateOfPurchase
+	 * @return the vehicleModel
 	 */
-	public Date getDateOfPurchase() {
-		return dateOfPurchase;
+	public String getVehicleModel() {
+		return vehicleModel;
 	}
 	/**
-	 * @param dateOfPurchase the dateOfPurchase to set
+	 * @param vehicleModel the vehicleModel to set
 	 */
-	public void setDateOfPurchase(Date dateOfPurchase) {
-		this.dateOfPurchase = dateOfPurchase;
+	public void setVehicleModel(String vehicleModel) {
+		this.vehicleModel = vehicleModel;
 	}
-	
+	/**
+	 * @return the pd
+	 */
+	public PersonDetails getPd() {
+		return pd;
+	}
+	/**
+	 * @param pd the pd to set
+	 */
+	public void setPd(PersonDetails pd) {
+		this.pd = pd;
+	}
 	
 }

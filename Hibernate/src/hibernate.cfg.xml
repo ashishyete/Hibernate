@@ -21,12 +21,18 @@
 		<!-- <property name="hibernate.hbm2ddl.auto">create</property>  -->
 		<property name="hibernate.hbm2ddl.auto">create</property>
 		
-		<mapping class="com.hibernate.dto.UserDetails"/>
+	<!-- 	<mapping class="com.hibernate.dto.UserDetails"/>
 		<mapping class="com.hibernate.dto.EmployeeDetails"/>
 		<mapping class="com.hibernate.dto.StudentDetails"/>
 		<mapping class="com.hibernate.dto.OfficeDetails"/>
-		<mapping class="com.hibernate.dto.Owner"/>
-		<mapping class="com.hibernate.dto.PersonDetails"/>
+		<mapping class="com.hibernate.dto.Owner"/> -->
+	<!-- 	<mapping class="com.hibernate.dto.PersonDetails"/>
 		<mapping class="com.hibernate.dto.Vehicle"/>
-	</session-factory>
+ 		<mapping class="com.hibernate.dto.PaymentCards"/> -->
+ 		<!-- <mapping class="com.hibernate.dto.Student"/>
+ 		<mapping class="com.hibernate.dto.Phone"/> -->
+ 		<mapping class="com.hibernate.dto.Vehicle"/>
+ 		<mapping class="com.hibernate.dto.PersonDetails"/>
+ 		<mapping class="com.hibernate.dto.PersonPersonalDetails"/>
+</session-factory>
 </hibernate-configuration>
