@@ -34,5 +34,10 @@
  		<mapping class="com.hibernate.dto.Vehicle"/>
  		<mapping class="com.hibernate.dto.PersonDetails"/>
  		<mapping class="com.hibernate.dto.PersonPersonalDetails"/>
+ 		<mapping class="com.hibernate.dto.ShapeDetails"/>
+ 		<mapping class="com.hibernate.dto.Triangle"/>
+ 		<mapping class="com.hibernate.dto.Rectangle"/>
+ 		
+ 		
 </session-factory>
 </hibernate-configuration>
